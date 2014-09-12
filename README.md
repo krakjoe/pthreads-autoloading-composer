@@ -12,3 +12,11 @@ Note that, one should learn to recognize avoiding mutable state as a good thing;
 we can safely assume that the code was never intended to be executed by multiple threads. 
 
 *The strategy used here ensures that each thread (Worker) gets an immutable copy of the framework in memory.*
+
+Run the Demo
+============
+
+    git clone https://github.com/krakjoe/pthreads-autoloading-composer
+    cd pthreads-autoloading-composer
+    composer install
+    php auto.php
