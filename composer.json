@@ -1,0 +1,11 @@
+{
+    "require":{
+        "ext-pthreads": ">=2.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Auto": "src/"
+        }
+    }
+}
+
