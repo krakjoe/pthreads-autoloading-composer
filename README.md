@@ -11,7 +11,7 @@ Notes
 Note that, one should learn to recognize avoiding mutable state as a good thing; when we are loading something like Symfony,
 we can safely assume that the code was never intended to be executed by multiple threads. 
 
-*The strategy used here ensures that each thread (Worker) gets an immutable copy of the framework in memory.*
+*The strategy used here ensures that each thread (Worker) gets a thread local copy of the framework, or whatever is being loaded, in memory.*
 
 Run the Demo
 ============
