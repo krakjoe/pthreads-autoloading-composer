@@ -8,10 +8,12 @@ This repository seeks to set out a sane example of using composers autoloader an
 Notes
 =====
 
-Note that, one should learn to recognize avoiding mutable state as a good thing; when we are loading something like Symfony,
-we can safely assume that the code was never intended to be executed by multiple threads. 
+When we are loading something like Symfony, we can safely assume that the code was never intended to be executed by multiple threads. 
 
-*The strategy used here ensures that each thread (Worker) gets a thread local copy of the framework, or whatever is being loaded, in memory.*
+Strategies within pthreads allow it to avoid sharing state between objects not intended for use in a multithreaded architecture, however they may
+have negative side effects.
+
+*The strategy used here ensures that each thread (Worker) gets a thread local copy of the framework, or whatever is being loaded, but does not break the abilities of objects that descend from pthreads.*
 
 Run the Demo
 ============
